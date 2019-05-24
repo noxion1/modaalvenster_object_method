@@ -1,0 +1,134 @@
+@import "https://fonts.googleapis.com/css?family=Play";
+
+body {
+  font-family: 'Play', sans-serif;
+  position: relative;
+  margin: 0;
+  background-color: rgb(51, 51, 51);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 1em;
+  padding: 1.2em;
+  justify-items: center;
+  background-color: rgb(51, 51, 51);
+}
+
+.wrapper .content {
+  display: none;
+}
+
+h1 {
+  grid-column: 1/-3;
+  color: rgba(255, 187, 51, 0.8);
+}
+
+h3:hover {
+  color: white;
+}
+
+label {
+  color: rgba(255, 187, 51, 0.8);
+}
+
+img {
+  box-shadow: 0 0 1em rgba(160, 187, 51, 1);
+}
+
+img.mButton {
+  max-width: 220px;
+  transition: transform .3s ease-out, box-shadow .4s ease-out;
+
+}
+
+img.mButton:hover {
+  transform: scale(1.1);
+  box-shadow: .5em .5em 2em white;
+}
+
+.mButton {
+  cursor: pointer;
+  color: rgba(255, 187, 51, 0.8);
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80vw;
+  grid-gap: 1.5em;
+}
+
+.grid img {
+  max-width: 100%;
+}
+
+.contentBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.hiddenContent {
+  max-width: 80%;
+  padding: 2em;
+  border-radius: 6px;
+  background-color: rgb(51, 51, 51);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 1em;
+  animation: reveal 1s ease-in-out;
+  border: solid;
+  border-color: rgba(255, 187, 51, 0.8);
+}
+
+@keyframes reveal {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+
+
+.exitButton {
+  width: 3em;
+  justify-self: end;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: 900;
+  background-color: rgb(51, 51, 51);
+  transform: translateX(.5em);
+  border: 0;
+  color: rgba(255, 187, 51, 0.5);
+}
+.exitButton:hover {
+  color: red;
+}
+
+article {
+  color: rgba(255, 187, 51, 0.8);
+  cursor: default;
+}
+
+.password {
+  margin-left: 26.5px;
+}
+
+.password2 {
+  margin-left: 57.5px;
+}
+
+.username {
+  margin-left: 31px;
+}
+
+#logButton {
+  margin-left: 216px;
+}
+#regButton {
+  margin-left: 222.5px;
+}
